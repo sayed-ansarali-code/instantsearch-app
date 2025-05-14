@@ -15,6 +15,28 @@ search.addWidgets([
   instantsearch.widgets.searchBox({
     container: '#searchbox',
   }),
+
+  // Genre Filter (Refinement List)
+  instantsearch.widgets.refinementList({
+    container: '#genre-filter',
+    attribute: 'genres',
+    searchable: true,
+    showMore: true,
+  }),
+
+  // Language Filter (Menu)
+  instantsearch.widgets.menu({
+    container: '#language-filter',
+    attribute: 'original_language',
+  }),
+
+  // Rating Filter (Range Slider)
+  instantsearch.widgets.rangeSlider({
+    container: '#rating-filter',
+    attribute: 'vote_average',
+    step: 0.1,
+    pips: true,
+  }),
   instantsearch.widgets.hits({
     container: '#hits',
     templates: {
