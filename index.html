@@ -17,10 +17,14 @@
   <link rel="stylesheet" href="./src/app.css">
   <script>
     if (location.hostname.endsWith('.vercel.app') || location.hostname === 'your-custom-domain.com') {
-      const vercelScript = document.createElement('script');
-      vercelScript.setAttribute('defer', '');
-      vercelScript.src = '/_vercel/insights/script.js';
-      document.head.appendChild(vercelScript);
+      const analyticsScript = document.createElement('script');
+      analyticsScript.setAttribute('defer', '');
+      analyticsScript.src = '/_vercel/insights/script.js';
+      document.head.appendChild(analyticsScript);
+      const speedAnalyticsScript = document.createElement('script');
+      speedAnalyticsScript.setAttribute('defer', '');
+      speedAnalyticsScript.src = '/_vercel/speed-insights/script.js';
+      document.head.appendChild(speedAnalyticsScript);
     }
   </script>
   
