@@ -14,6 +14,7 @@
     "prettier": "2.6.2"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.5.0",
     "algoliasearch": "4",
     "instantsearch.js": "4.78.3"
   }
