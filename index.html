@@ -16,10 +16,14 @@
   <link rel="stylesheet" href="./src/index.css">
   <link rel="stylesheet" href="./src/app.css">
   <script>
-    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    if (location.hostname.endsWith('.vercel.app') || location.hostname === 'your-custom-domain.com') {
+      const vercelScript = document.createElement('script');
+      vercelScript.setAttribute('defer', '');
+      vercelScript.src = '/_vercel/insights/script.js';
+      document.head.appendChild(vercelScript);
+    }
   </script>
-  <script defer src="/_vercel/insights/script.js"></script>
-
+  
   <title>instantsearch-app</title>
 </head>
 
